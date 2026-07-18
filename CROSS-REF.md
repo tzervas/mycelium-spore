@@ -6,8 +6,8 @@ content hash = git tree hash of the pinned rev.
 
 | Interface consumed | Repo | Pinned rev | Content hash | Notes |
 |---|---|---|---|---|
-| mycelium-core | https://github.com/tzervas/mycelium-core | `781d3fcceba82acfe6b0eb46650513bd78a2416b` | tree `(tree hash: fetch dep rev locally to resolve)` | Rust API of `mycelium-core` (see monorepo `docs/api-index/INDEX.md#mycelium-core`) |
-| mycelium-proj | https://github.com/tzervas/mycelium-proj | `cfc934b32c0b7b57becbb7ddfe3c516712c6ec0e` | tree `(tree hash: fetch dep rev locally to resolve)` | Rust API of `mycelium-proj` (see monorepo `docs/api-index/INDEX.md#mycelium-proj`) |
+| mycelium-core | https://github.com/tzervas/mycelium-core | `46d2515cbd86d2ae4d1365f4adcd2796737e9f0b` | tree `(tree hash: fetch dep rev locally to resolve)` | Rust API of `mycelium-core` (see monorepo `docs/api-index/INDEX.md#mycelium-core`) |
+| mycelium-proj | https://github.com/tzervas/mycelium-proj | `20b8a6d264ac728e81cfe8cd90cec8d2a91370be` | tree `(tree hash: fetch dep rev locally to resolve)` | Rust API of `mycelium-proj` (see monorepo `docs/api-index/INDEX.md#mycelium-proj`) |
 
 **Owning docs:** see monorepo `docs/Doc-Index.md`.
 **Source provenance:** extracted from `tzervas/mycelium` archive `aad96b7a…`; fixed by
