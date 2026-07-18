@@ -14,8 +14,8 @@ workspace = true
 [dependencies]
 # The manifest layer (M-359) + the kernel content-address type (ADR-003) + the workspace-pinned hasher.
 # No NEW external dependency: blake3 is already a vetted workspace dependency (mycelium-core, -lsp).
-mycelium-proj = { path = "../mycelium-proj" }
-mycelium-core = { path = "../mycelium-core" }
+mycelium-proj = { git = "https://github.com/tzervas/mycelium-proj", rev = "cfc934b32c0b7b57becbb7ddfe3c516712c6ec0e" }
+mycelium-core = { git = "https://github.com/tzervas/mycelium-core", rev = "781d3fcceba82acfe6b0eb46650513bd78a2416b" }
 blake3.workspace = true
 
 [dev-dependencies]
@@ -26,3 +26,30 @@ proptest = "1"
 [[bin]]
 name = "spore"
 path = "src/bin/spore.rs"
+
+# --- standalone workspace root (course-correction Phase B, 2026-07-18; steer handoff §6.2) ---
+[workspace]
+
+[workspace.package]
+version = "0.464.0"
+edition = "2021"
+rust-version = "1.96.1"
+license = "MIT"
+repository = "https://github.com/tzervas/mycelium-spore"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+blake3 = "1"
+
+[workspace.lints.rust]
+# ADR-014: unsafe permitted-but-documented; the check is clippy::undocumented_unsafe_blocks.
+unsafe_code = "allow"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+undocumented_unsafe_blocks = "warn"
+
+# G2 never-silent arithmetic: release builds panic on overflow (monorepo parity).
+[profile.release]
+overflow-checks = true
