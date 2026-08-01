@@ -15,7 +15,7 @@ workspace = true
 # The manifest layer (M-359) + the kernel content-address type (ADR-003) + the workspace-pinned hasher.
 # No NEW external dependency: blake3 is already a vetted workspace dependency (mycelium-core, -lsp).
 mycelium-proj = { git = "https://github.com/tzervas/mycelium-proj", rev = "3209a570c472cd8a94c52f8562cbbfd07c12f322" }
-mycelium-core = { git = "https://github.com/tzervas/mycelium-core", rev = "46d2515cbd86d2ae4d1365f4adcd2796737e9f0b" }
+mycelium-core = { git = "https://github.com/tzervas/mycelium-core", rev = "3958d2ea3c3921611e33f1f00e3469b29a939a76" }
 blake3.workspace = true
 
 [dev-dependencies]
